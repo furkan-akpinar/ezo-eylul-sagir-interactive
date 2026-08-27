@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ezo Eylül Sağır iç mimarlık projelerinin foto-gerçekçi gündüz ve gece renderlarını inceleyin.">
+  <meta name="theme-color" content="#0d0c0a">
+  <title>Foto-Gerçekçi Proje Renderları | Ezo Eylül Sağır</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0a'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-size='30' fill='%23c9a86a' font-family='serif'%3EE%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;1,500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/render-project.css">
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">İçeriğe geç</a>
+  <header class="render-header">
+    <a class="render-brand" href="index.html" aria-label="Ezo Eylül Sağır ana sayfa">
+      <span class="render-brand__mark">E</span>
+      <span><strong>Ezo Eylül Sağır</strong><small>İÇ MİMARLIK</small></span>
+    </a>
+    <a class="render-back" href="projects.html">← Tüm Projeler</a>
+  </header>
+
+  <main id="mainContent">
+    <section class="render-hero">
+      <div class="render-hero__copy">
+        <span class="render-eyebrow" id="projectCategory">Konut · Mutfak</span>
+        <h1 id="projectTitle">Traverten Mutfak</h1>
+        <p id="projectDescription">Doğal taş, füme meşe ve bronz detayların sakin bir ışık kurgusuyla birleştiği çağdaş mutfak tasarımı.</p>
+      </div>
+      <div class="render-mode" role="group" aria-label="Render ışık durumunu seçin">
+        <button type="button" data-mode="day" aria-pressed="true"><span>☀</span> Gündüz</button>
+        <button type="button" data-mode="night" aria-pressed="false"><span>☾</span> Gece</button>
+      </div>
+    </section>
+
+    <section class="render-intro">
+      <p><strong>Üç farklı kamera.</strong> Gündüz ve gece için ayrı hazırlanmış, aynı tasarımı ve mevcut armatürleri koruyan eşleşmiş 8K renderlar.</p>
+      <div class="render-specs" id="projectSpecs" aria-label="Proje bilgileri"></div>
+    </section>
+
+    <section class="render-grid" id="renderGrid" aria-label="Proje render galerisi"></section>
+
+    <section class="render-next">
+      <span>Sıradaki Çalışma</span>
+      <a id="nextProject" href="render-project.html?project=living">Projeyi İncele <b>→</b></a>
+    </section>
+  </main>
+
+  <footer class="render-footer">
+    <p>© <span id="renderYear"></span> Ezo Eylül Sağır İç Mimarlık</p>
+    <a href="contact.html">Projenizi Anlatın</a>
+  </footer>
+
+  <script src="assets/js/render-project.js"></script>
+</body>
+</html>

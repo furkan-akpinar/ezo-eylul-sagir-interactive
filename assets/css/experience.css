@@ -1,0 +1,212 @@
+/* Ezo Eylül Sağır — video hero ve etkileşimli proje bağlantıları */
+.home-hero {
+  isolation: isolate;
+  background: #090908;
+}
+
+.home-hero::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(8, 8, 7, .92) 0%, rgba(8, 8, 7, .66) 44%, rgba(8, 8, 7, .2) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, .62), transparent 55%);
+  pointer-events: none;
+}
+
+.home-hero::after {
+  z-index: -1;
+}
+
+.hero-video {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(.78) contrast(1.05) brightness(.82);
+}
+
+.hero-video-control {
+  position: absolute;
+  z-index: 4;
+  right: 28px;
+  top: 112px;
+  display: inline-flex;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, .34);
+  align-items: center;
+  gap: 9px;
+  color: #fff;
+  background: rgba(10, 10, 9, .5);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  transition: border-color .25s ease, background .25s ease, transform .25s ease;
+}
+
+.hero-video-control:hover {
+  border-color: var(--gold);
+  background: rgba(10, 10, 9, .72);
+  transform: translateY(-2px);
+}
+
+.hero-video-control__icon {
+  width: 9px;
+  height: 12px;
+  border-right: 3px solid currentColor;
+  border-left: 3px solid currentColor;
+}
+
+.hero-video-control.is-paused .hero-video-control__icon {
+  width: 0;
+  height: 0;
+  border: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 10px solid currentColor;
+}
+
+.tour-showcase {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+  background:
+    radial-gradient(circle at 82% 20%, rgba(201, 168, 106, .16), transparent 30%),
+    linear-gradient(135deg, #0c0c0b 0%, #181612 100%);
+}
+
+.tour-showcase__inner {
+  display: grid;
+  min-height: 410px;
+  padding-block: 76px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+  align-items: center;
+  gap: clamp(42px, 8vw, 110px);
+}
+
+.tour-showcase__copy h2 {
+  max-width: 760px;
+  margin: 18px 0 22px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 500;
+  letter-spacing: -.045em;
+  line-height: 1;
+}
+
+.tour-showcase__copy p {
+  max-width: 650px;
+  color: var(--muted);
+}
+
+.tour-showcase__features {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(255, 255, 255, .14);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, .3);
+}
+
+.tour-showcase__feature {
+  min-height: 145px;
+  padding: 26px;
+  background: rgba(16, 15, 13, .94);
+}
+
+.tour-showcase__feature i {
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+.tour-showcase__feature strong {
+  display: block;
+  margin-top: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.tour-showcase__feature span {
+  display: block;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: .66rem;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.project-thumb.is-render-ready::before,
+.ezo-proje-kart__gorsel.is-render-ready::before {
+  position: absolute;
+  z-index: 3;
+  top: 18px;
+  left: 18px;
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, .26);
+  content: "GÜNDÜZ / GECE RENDER";
+  color: #fff;
+  background: rgba(11, 11, 10, .7);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  font-size: .58rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.project-thumb.is-render-ready::after,
+.ezo-proje-kart__gorsel.is-render-ready::after {
+  position: absolute;
+  z-index: 3;
+  top: 20px;
+  right: 20px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, .3);
+  border-radius: 50%;
+  content: "6×";
+  color: var(--gold-light);
+  background: rgba(11, 11, 10, .68);
+  font-size: .62rem;
+  font-weight: 800;
+  line-height: 38px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .tour-showcase__inner { grid-template-columns: 1fr; }
+  .hero-video-control { top: auto; right: 18px; bottom: 205px; }
+}
+
+@media (max-width: 640px) {
+  .hero-video-control {
+    right: 12px;
+    bottom: 252px;
+    min-height: 40px;
+    padding-inline: 12px;
+  }
+
+  .hero-video-control__label { display: none; }
+  .tour-showcase__inner { min-height: 0; padding-block: 62px; }
+  .tour-showcase__features { grid-template-columns: 1fr 1fr; }
+  .tour-showcase__feature { min-height: 128px; padding: 20px; }
+  .project-thumb.is-render-ready::before,
+  .ezo-proje-kart__gorsel.is-render-ready::before { top: 12px; left: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video { display: none; }
+  .home-hero {
+    background:
+      linear-gradient(90deg, rgba(8, 8, 7, .9), rgba(8, 8, 7, .38)),
+      url("https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2200&q=88") center / cover no-repeat;
+  }
+}
